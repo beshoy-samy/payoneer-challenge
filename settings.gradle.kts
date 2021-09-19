@@ -9,4 +9,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "PayoneerChallenge"
+
 include(":app")
+include(":network")
