@@ -52,7 +52,7 @@ dependencies {
     withAndroidX()
     withHilt()
     withNavigationComponent()
-    withTestDependencies()
+    withAllTestDependencies()
 }
 
 kapt {

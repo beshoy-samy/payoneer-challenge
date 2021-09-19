@@ -18,19 +18,39 @@ object TestDependencies {
 
     private const val junit = "junit:junit:${Versions.junit}"
 
+    internal val testDependencies = listOf(junit)
+
+    internal val androidTestDependencies = listOf(Android.junit, Android.espresso)
+
     internal val dependencies = mapOf(
-        "testImplementation" to listOf(junit),
-        "androidTestImplementation" to listOf(Android.junit, Android.espresso)
+        "testImplementation" to testDependencies,
+        "androidTestImplementation" to androidTestDependencies
     )
 }
 
-fun DependencyHandlerScope.withTestDependencies() {
+fun DependencyHandlerScope.withAllTestDependencies() {
 
     TestDependencies.dependencies.keys.forEach { libraryKey ->
 
         val libs = TestDependencies.dependencies[libraryKey]!!
 
         libs.forEach { add(libraryKey, it) }
+    }
+
+}
+
+fun DependencyHandlerScope.withTestDependencies() {
+
+    TestDependencies.testDependencies.forEach { library ->
+        add("testImplementation", library)
+    }
+
+}
+
+fun DependencyHandlerScope.withAndroidTestDependencies() {
+
+    TestDependencies.androidTestDependencies.forEach { library ->
+        add("androidTestImplementation", library)
     }
 
 }
