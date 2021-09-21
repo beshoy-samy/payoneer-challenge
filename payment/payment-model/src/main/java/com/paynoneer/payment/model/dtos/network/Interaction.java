@@ -1,5 +1,5 @@
 
-package com.paynoneer.payment.model.dtos;
+package com.paynoneer.payment.model.dtos.network;
 
 import com.squareup.moshi.Json;
 

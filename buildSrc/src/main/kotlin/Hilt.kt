@@ -12,3 +12,7 @@ fun DependencyHandlerScope.withHilt() {
     add("implementation", Hilt.hilt)
     add("kapt", Hilt.hiltCompiler)
 }
+
+fun DependencyHandlerScope.withJavaInject() {
+    add("implementation", "javax.inject:javax.inject:1")
+}
