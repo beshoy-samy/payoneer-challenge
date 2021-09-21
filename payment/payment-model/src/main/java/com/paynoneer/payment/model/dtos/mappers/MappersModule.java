@@ -1,9 +1,7 @@
-package com.paynoneer.payment.model.repos;
+package com.paynoneer.payment.model.dtos.mappers;
 
 import com.paynoneer.payment.domain.contracts.Mapper;
-import com.paynoneer.payment.domain.contracts.PaymentRepository;
 import com.paynoneer.payment.domain.entities.PaymentMethodDomainModel;
-import com.paynoneer.payment.model.datasources.PaymentDataSource;
 import com.paynoneer.payment.model.dtos.network.PaymentMethodsResponseModel;
 
 import java.util.List;
@@ -15,11 +13,11 @@ import dagger.hilt.android.components.ViewModelComponent;
 
 @Module
 @InstallIn(ViewModelComponent.class)
-public class RepositoriesModule {
+public class MappersModule {
 
     @Provides
-    PaymentRepository providePaymentRepository(PaymentDataSource dataSource, Mapper<PaymentMethodsResponseModel, List<PaymentMethodDomainModel>> mapper) {
-        return new PaymentRepositoryImp(dataSource, mapper);
+    Mapper<PaymentMethodsResponseModel, List<PaymentMethodDomainModel>> provideNetworkPaymentMethodMapper() {
+        return new NetworkPaymentMethodMapper();
     }
 
 }

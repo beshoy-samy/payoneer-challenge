@@ -11,4 +11,7 @@ object Payments {
 
     fun DependencyHandlerScope.withPaymentsModelModule() =
         add("implementation", project(":payment:payment-model"))
+
+    fun DependencyHandlerScope.withPaymentsDomainModule() =
+        add("implementation", project(":payment:payment-domain"))
 }

@@ -1,6 +1,6 @@
 package com.paynoneer.payment.model.services;
 
-import com.paynoneer.payment.model.dtos.PaymentMethodsResponseModel;
+import com.paynoneer.payment.model.dtos.network.PaymentMethodsResponseModel;
 
 import io.reactivex.rxjava3.core.Single;
 import retrofit2.http.GET;

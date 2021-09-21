@@ -1,4 +1,5 @@
 import AppModules.withNetworkModule
+import Payments.withPaymentsDomainModule
 
 plugins {
     id(Build.Plugins.androidLibraryPlugin)
@@ -24,12 +25,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = Config.javaVersion
+        targetCompatibility = Config.javaVersion
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = Config.javaVersion.toString()
     }
 
 }
@@ -37,6 +38,7 @@ android {
 dependencies {
     withHilt()
     withNetworkModule()
+    withPaymentsDomainModule()
     withRxjava()
     withAllTestDependencies()
 }
