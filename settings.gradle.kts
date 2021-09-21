@@ -12,3 +12,4 @@ rootProject.name = "PayoneerChallenge"
 
 include(":app")
 include(":network")
+include(":core")
