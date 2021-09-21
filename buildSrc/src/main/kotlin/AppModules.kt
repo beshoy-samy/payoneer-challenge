@@ -5,6 +5,9 @@ object AppModules {
 
     fun DependencyHandlerScope.withNetworkModule() =
         add("api", project(":network"))
+
+    fun DependencyHandlerScope.withCoreModule() =
+        add("api", project(":core"))
 }
 
 object Payments {
