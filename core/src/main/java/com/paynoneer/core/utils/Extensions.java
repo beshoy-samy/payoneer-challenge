@@ -1,9 +1,17 @@
-package com.paynoneer.network;
+package com.paynoneer.core.utils;
 
 import android.content.Context;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import androidx.annotation.DrawableRes;
+
+import com.bumptech.glide.Glide;
+import com.paynoneer.core.R;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
+
 import retrofit2.HttpException;
 
 public interface Extensions {
@@ -23,5 +31,17 @@ public interface Extensions {
             }
         }
         return null;
+    }
+
+    static void showShortToast(String message, Context context) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
+
+    static void showLongToast(String message, Context context) {
+        Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+    }
+
+    static void loadImage(ImageView imageView, String url, @DrawableRes int placeholder) {
+        Glide.with(imageView).load(url).placeholder(placeholder).into(imageView);
     }
 }

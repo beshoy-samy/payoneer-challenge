@@ -12,12 +12,18 @@ object AppModules {
 
 object Payments {
 
-    fun DependencyHandlerScope.withPaymentsModelModule() =
+    fun DependencyHandlerScope.withPaymentModelModule() =
         add("implementation", project(":payment:payment-model"))
 
-    fun DependencyHandlerScope.withPaymentsDomainModule() =
+    fun DependencyHandlerScope.withPaymentDomainModule() =
         add("implementation", project(":payment:payment-domain"))
 
-    fun DependencyHandlerScope.withPaymentsPresentationModule() =
+    fun DependencyHandlerScope.withPaymentPresentationModule() =
         add("implementation", project(":payment:payment-presentation"))
+
+    fun DependencyHandlerScope.withPaymentModule(){
+        add("implementation", project(":payment:payment-domain"))
+        add("implementation", project(":payment:payment-model"))
+        add("implementation", project(":payment:payment-presentation"))
+    }
 }

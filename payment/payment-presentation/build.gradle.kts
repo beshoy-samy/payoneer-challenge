@@ -1,5 +1,5 @@
 import AppModules.withCoreModule
-import Payments.withPaymentsDomainModule
+import Payments.withPaymentDomainModule
 
 plugins {
     id(Build.Plugins.androidLibraryPlugin)
@@ -41,8 +41,9 @@ android {
 dependencies {
     withAndroidX()
     withHilt()
+    withNavigationComponent()
     withCoreModule()
-    withPaymentsDomainModule()
+    withPaymentDomainModule()
 }
 
 kapt {

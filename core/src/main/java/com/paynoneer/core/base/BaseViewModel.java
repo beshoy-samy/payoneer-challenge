@@ -7,7 +7,7 @@ import io.reactivex.rxjava3.disposables.Disposable;
 
 public abstract class BaseViewModel extends ViewModel {
 
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    private final CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     protected void addToDisposableBag(Disposable disposable) {
         compositeDisposable.add(disposable);

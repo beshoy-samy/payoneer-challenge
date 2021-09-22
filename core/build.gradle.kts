@@ -39,6 +39,8 @@ dependencies {
     withAndroidX()
     withHilt()
     withRxAndroid()
+    withRetrofit()
+    withGlide()
 }
 
 kapt {
