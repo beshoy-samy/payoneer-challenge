@@ -13,3 +13,7 @@ rootProject.name = "PayoneerChallenge"
 include(":app")
 include(":network")
 include(":core")
+
+include(":payment:payment-model")
+include(":payment:payment-domain")
+include(":payment:payment-presentation")

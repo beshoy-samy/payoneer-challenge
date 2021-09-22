@@ -1,3 +1,7 @@
+import AppModules.withCoreModule
+import Payments.withPaymentModule
+import Payments.withPaymentPresentationModule
+
 plugins {
     id(Build.Plugins.androidApplicationPlugin)
     kotlin(Build.Plugins.kotlinAndroidPlugin)
@@ -34,12 +38,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = Config.javaVersion
+        targetCompatibility = Config.javaVersion
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = Config.javaVersion.toString()
     }
 
     buildFeatures {
@@ -52,6 +56,8 @@ dependencies {
     withAndroidX()
     withHilt()
     withNavigationComponent()
+    withCoreModule()
+    withPaymentModule()
     withAllTestDependencies()
 }
 

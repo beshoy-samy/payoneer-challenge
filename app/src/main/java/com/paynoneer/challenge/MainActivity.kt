@@ -1,11 +1,21 @@
 package com.paynoneer.challenge
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.paynoneer.challenge.databinding.ActivityMainBinding
+import com.paynoneer.core.base.activity.ActivityViewBinder
+import com.paynoneer.core.base.activity.BaseActivity
+import com.paynoneer.core.base.activity.BaseEmptyActivity
+import dagger.hilt.android.AndroidEntryPoint
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+@AndroidEntryPoint
+class MainActivity : BaseEmptyActivity<ActivityMainBinding>() {
+
+    override fun getViewBinder(): ActivityViewBinder<ActivityMainBinding> {
+        return ActivityViewBinder { ActivityMainBinding.inflate(it) }
     }
+
+    override fun onBindFinished(savedInstanceState: Bundle?) {
+        //left to be used later if needed
+    }
+
 }

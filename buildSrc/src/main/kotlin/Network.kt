@@ -8,7 +8,7 @@ object Network {
         const val okhttp = "4.9.1"
     }
 
-    private const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    internal const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     private const val moshiConverter =
         "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
     private const val rxjavaAdapter =
@@ -43,4 +43,8 @@ fun DependencyHandlerScope.withMoshi() {
         val lib = Network.moshiDependencies[libraryKey]!!
         add(libraryKey, lib)
     }
+}
+
+fun DependencyHandlerScope.withRetrofit() {
+    add("implementation", Network.retrofit)
 }

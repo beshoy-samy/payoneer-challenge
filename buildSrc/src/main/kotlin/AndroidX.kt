@@ -8,6 +8,7 @@ object AndroidX {
         const val material = "1.4.0"
         const val constraint = "2.1.0"
         const val recycler = "1.2.1"
+        const val cardView = "1.0.0"
     }
 
     private const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
@@ -16,10 +17,11 @@ object AndroidX {
     private const val constraint =
         "androidx.constraintlayout:constraintlayout:${Versions.constraint}"
     private const val recycler = "androidx.recyclerview:recyclerview:${Versions.recycler}"
+    private const val cardView = "androidx.cardview:cardview:${Versions.cardView}"
 
     internal val dependencies =
         mapOf(
-            "implementation" to listOf(coreKtx, appcompat, material, constraint, recycler)
+            "implementation" to listOf(coreKtx, appcompat, material, constraint, recycler, cardView)
         )
 }
 
