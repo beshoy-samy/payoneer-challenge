@@ -1,11 +1,6 @@
 package com.paynoneer.core.di;
 
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-
-import javax.inject.Qualifier;
-
 import dagger.Module;
 import dagger.Provides;
 import dagger.hilt.InstallIn;
@@ -36,19 +31,4 @@ public class BaseViewModelModule {
         return Schedulers.trampoline();
     }
 
-}
-
-@Qualifier
-@Retention(RetentionPolicy.RUNTIME)
-@interface AndroidScheduler {
-}
-
-@Qualifier
-@Retention(RetentionPolicy.RUNTIME)
-@interface IOScheduler {
-}
-
-@Qualifier
-@Retention(RetentionPolicy.RUNTIME)
-@interface TrampolineScheduler {
 }

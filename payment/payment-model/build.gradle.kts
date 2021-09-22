@@ -1,5 +1,6 @@
 import AppModules.withNetworkModule
-import Payments.withPaymentsDomainModule
+import Payments.withPaymentDomainModule
+import Payments.withPaymentModelModule
 
 plugins {
     id(Build.Plugins.androidLibraryPlugin)
@@ -38,7 +39,7 @@ android {
 dependencies {
     withHilt()
     withNetworkModule()
-    withPaymentsDomainModule()
+    withPaymentDomainModule()
     withRxjava()
     withAllTestDependencies()
 }

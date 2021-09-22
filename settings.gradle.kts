@@ -16,3 +16,4 @@ include(":core")
 
 include(":payment:payment-model")
 include(":payment:payment-domain")
+include(":payment:payment-presentation")

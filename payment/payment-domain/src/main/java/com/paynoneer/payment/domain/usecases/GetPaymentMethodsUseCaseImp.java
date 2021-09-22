@@ -14,7 +14,7 @@ public class GetPaymentMethodsUseCaseImp implements GetPaymentMethodsUseCase {
     private final PaymentRepository paymentRepository;
 
     @Inject
-    protected GetPaymentMethodsUseCaseImp(PaymentRepository paymentRepository) {
+    public GetPaymentMethodsUseCaseImp(PaymentRepository paymentRepository) {
         this.paymentRepository = paymentRepository;
     }
 

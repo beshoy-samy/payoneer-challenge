@@ -1,3 +1,7 @@
+import AppModules.withCoreModule
+import Payments.withPaymentModule
+import Payments.withPaymentPresentationModule
+
 plugins {
     id(Build.Plugins.androidApplicationPlugin)
     kotlin(Build.Plugins.kotlinAndroidPlugin)
@@ -52,6 +56,8 @@ dependencies {
     withAndroidX()
     withHilt()
     withNavigationComponent()
+    withCoreModule()
+    withPaymentModule()
     withAllTestDependencies()
 }
 

@@ -1,3 +1,6 @@
+import AppModules.withCoreModule
+import Payments.withPaymentDomainModule
+
 plugins {
     id(Build.Plugins.androidLibraryPlugin)
     kotlin(Build.Plugins.kotlinAndroidPlugin)
@@ -38,9 +41,9 @@ android {
 dependencies {
     withAndroidX()
     withHilt()
-    withRxAndroid()
-    withRetrofit()
-    withGlide()
+    withNavigationComponent()
+    withCoreModule()
+    withPaymentDomainModule()
 }
 
 kapt {

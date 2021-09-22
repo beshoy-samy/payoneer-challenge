@@ -1,5 +1,3 @@
-import Payments.withPaymentsModelModule
-
 plugins {
     id(Build.Plugins.javaLibraryPlugin)
     id(Build.Plugins.kotlinPlugin)
