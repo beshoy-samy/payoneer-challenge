@@ -7,6 +7,6 @@
 
     <fragment
         android:id="@+id/paymentMethodsFragment"
-        android:name="com.paynoneer.payment.presentation.methods.PaymentMethodsFragment"
+        android:name="com.payoneer.payment.presentation.methods.PaymentMethodsFragment"
         tools:layout="@layout/fragment_payment_methods" />
 </navigation>

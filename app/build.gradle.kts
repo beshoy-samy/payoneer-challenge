@@ -14,7 +14,7 @@ android {
     compileSdk = Config.AndroidProject.compileSdkVersion
 
     defaultConfig {
-        applicationId = "com.paynoneer.challenge"
+        applicationId = "com.payoneer.challenge"
         minSdk = Config.AndroidProject.minSdkVersion
         targetSdk = Config.AndroidProject.targetSdkVersion
         versionCode = Config.AndroidProject.versionCode

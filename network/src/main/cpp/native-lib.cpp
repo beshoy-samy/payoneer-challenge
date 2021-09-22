@@ -6,7 +6,7 @@
 
 extern "C" JNIEXPORT jstring
 JNICALL
-Java_com_paynoneer_network_NetworkKeys_getBaseUrl(JNIEnv *env, jclass object) {
+Java_com_payoneer_network_NetworkKeys_getBaseUrl(JNIEnv *env, jclass object) {
     std::string baseUrl = "https://raw.githubusercontent.com/";
     return env->NewStringUTF(baseUrl.c_str());
 }
